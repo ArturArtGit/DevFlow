@@ -4,79 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Set up Eslint, Prettier, fonts, assets.">
-      <change afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/InterVF.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/fonts/SpaceGroteskVF.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/account.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/arrow-left.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/arrow-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/arrow-up-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/au.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/avatar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/bronze-medal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/calendar.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/carbon-location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/chevron-down.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/chevron-right.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/clock-2.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/close.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/computer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/currency-dollar-circle.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/downvote.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/downvoted.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/edit.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/eye.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/github.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/gold-medal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/google.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/hamburger.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/job-search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/like.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/link.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/location.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/message.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/mingcute-down-line.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/moon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/question.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/sign-up.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/silver-medal.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/star-filled.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/star-red.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/star.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/stars.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/suitcase.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/sun.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/tag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/trash.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/upvote.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/upvoted.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/user.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/icons/users.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/auth-dark.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/auth-light.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/dark-error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/dark-illustration.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/default-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/light-error.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/light-illustration.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo-dark.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo-light.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/site-logo.svg" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Setup theme provider">
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/eslint.config.mjs" beforeDir="false" afterPath="$PROJECT_DIR$/eslint.config.mjs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -153,8 +86,25 @@
       <workItem from="1739877201637" duration="3991000" />
       <workItem from="1739887764587" duration="2338000" />
       <workItem from="1739891608126" duration="3960000" />
-      <workItem from="1739962319989" duration="2831000" />
+      <workItem from="1739962319989" duration="6050000" />
     </task>
+    <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
+      <option name="closed" value="true" />
+      <created>1739966340415</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739966340415</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Setup theme provider">
+      <option name="closed" value="true" />
+      <created>1739982939318</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1739982939318</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +112,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Set up Eslint, Prettier, fonts, assets." />
-    <option name="LAST_COMMIT_MESSAGE" value="Set up Eslint, Prettier, fonts, assets." />
+    <MESSAGE value="Setup theme provider" />
+    <option name="LAST_COMMIT_MESSAGE" value="Setup theme provider" />
   </component>
 </project>
