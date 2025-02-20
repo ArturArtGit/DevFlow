@@ -5,13 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Set up Light &amp; Dark Theme, Shadcn, Navbar">
-      <change afterPath="$PROJECT_DIR$/components/navigation/navbar/Theme.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/navigation/navbar/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/sign-in/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(auth)/sign-ip/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/(root)/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/api/auth/[...nextauth]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/forms/SocialAuthForm.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/middleware.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
@@ -25,6 +31,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -58,7 +65,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "A:/WebStormApps/Learning different technoligies/NextJS/JavaScript Mastery/the-ultimate-nextjs-15/app",
+    "last_opened_file_path": "D:/Up/Downloads/jsmasterypro_devflow-main",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -76,6 +83,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\app" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\public" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\app\(root)" />
+      <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\app\(auth)" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -98,7 +109,8 @@
       <workItem from="1739877201637" duration="3991000" />
       <workItem from="1739887764587" duration="2338000" />
       <workItem from="1739891608126" duration="3960000" />
-      <workItem from="1739962319989" duration="7812000" />
+      <workItem from="1739962319989" duration="8492000" />
+      <workItem from="1740047838817" duration="8685000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -124,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1739983123467</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Set up Light &amp; Dark Theme, Shadcn, Navbar">
+      <option name="closed" value="true" />
+      <created>1739984892566</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1739984892566</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
