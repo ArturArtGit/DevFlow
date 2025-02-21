@@ -19,8 +19,8 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
           (pathname.includes(item.route) && item.route.length > 1) ||
           pathname === item.route
 
-        if (item.route === ROUTES.PROFILE) {
-          if (userId) item.route = `${item.route}/${userId}`
+        if (item.route === "/profile") {
+          if (userId) item.route = ROUTES.PROFILE(userId)
           else return null
         }
 

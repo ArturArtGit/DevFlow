@@ -26,11 +26,18 @@ export const metadata: Metadata = {
   icons: "/images/site-logo.svg",
 }
 
-const RootLayout = async ({ children }: { children: ReactNode }) => {
+const Layout = async ({ children }: { children: ReactNode }) => {
   const session = await auth()
 
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+        />
+      </head>
       <SessionProvider session={session}>
         <body
           className={`${inter.className} ${spaceGrotesk.variable} antialiased`}
@@ -45,4 +52,4 @@ const RootLayout = async ({ children }: { children: ReactNode }) => {
   )
 }
 
-export default RootLayout
+export default Layout
