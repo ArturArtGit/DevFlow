@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Home Filters">
-      <change afterPath="$PROJECT_DIR$/components/Metric.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/cards/QuestionCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Question Card">
+      <change afterPath="$PROJECT_DIR$/components/forms/QuestionForm.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cards/TagCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/TagCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/ask-question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/ask-question/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +103,7 @@
       <workItem from="1740072072706" duration="5542000" />
       <workItem from="1740158865240" duration="2143000" />
       <workItem from="1740171607307" duration="11470000" />
-      <workItem from="1740221987248" duration="2709000" />
+      <workItem from="1740221987248" duration="4434000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -181,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740185646001</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Implement Question Card">
+      <option name="closed" value="true" />
+      <created>1740225777625</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1740225777625</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +200,7 @@
     <MESSAGE value="Implement RightSidebar" />
     <MESSAGE value="Implement Search bar" />
     <MESSAGE value="Implement Home Filters" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Home Filters" />
+    <MESSAGE value="Implement Question Card" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Question Card" />
   </component>
 </project>
