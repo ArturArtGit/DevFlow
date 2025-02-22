@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Question Card">
-      <change afterPath="$PROJECT_DIR$/components/forms/QuestionForm.tsx" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement the UI of the Question Form">
+      <change afterPath="$PROJECT_DIR$/components/editor/dark-editor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/editor/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/mongoose.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/ask-question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/ask-question/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/cards/TagCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/TagCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/QuestionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/QuestionForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +23,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -53,7 +58,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;A:/WebStormApps/Learning different technoligies/NextJS/JavaScript Mastery/the-ultimate-nextjs-15/constants&quot;,
+    &quot;last_opened_file_path&quot;: &quot;A:/WebStormApps/Learning different technoligies/NextJS/JavaScript Mastery/the-ultimate-nextjs-15/components/editor&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -69,6 +74,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\components\editor" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\constants" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\app" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\public" />
@@ -103,7 +109,8 @@
       <workItem from="1740072072706" duration="5542000" />
       <workItem from="1740158865240" duration="2143000" />
       <workItem from="1740171607307" duration="11470000" />
-      <workItem from="1740221987248" duration="4434000" />
+      <workItem from="1740221987248" duration="10543000" />
+      <workItem from="1740259409002" duration="2444000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -185,7 +192,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740225777625</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Implement the UI of the Question Form">
+      <option name="closed" value="true" />
+      <created>1740227630719</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1740227630719</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +216,7 @@
     <MESSAGE value="Implement Search bar" />
     <MESSAGE value="Implement Home Filters" />
     <MESSAGE value="Implement Question Card" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Question Card" />
+    <MESSAGE value="Implement the UI of the Question Form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement the UI of the Question Form" />
   </component>
 </project>
