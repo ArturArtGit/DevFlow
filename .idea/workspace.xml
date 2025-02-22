@@ -4,20 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Create MobileNav and Pages Links">
-      <change afterPath="$PROJECT_DIR$/components/cards/TagCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/navigation/LeftSidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/components/navigation/RightSidebar.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/techMap.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Search bar">
+      <change afterPath="$PROJECT_DIR$/components/search/LocalSearch.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/url.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation/navbar/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/navbar/NavLinks.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -111,7 +104,7 @@
       <workItem from="1740047838817" duration="9027000" />
       <workItem from="1740072072706" duration="5542000" />
       <workItem from="1740158865240" duration="2143000" />
-      <workItem from="1740171607307" duration="4443000" />
+      <workItem from="1740171607307" duration="9699000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -161,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740171573792</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Implement RightSidebar">
+      <option name="closed" value="true" />
+      <created>1740176677532</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1740176677532</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +174,8 @@
     <MESSAGE value="Set up Light &amp; Dark Theme, Shadcn, Navbar" />
     <MESSAGE value="Setup Auth Layouts, Social Auth Form, Next Auth, OAuth with Google and Github providers" />
     <MESSAGE value="Create MobileNav and Pages Links" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create MobileNav and Pages Links" />
+    <MESSAGE value="Implement RightSidebar" />
+    <MESSAGE value="Implement Search bar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Search bar" />
   </component>
 </project>
