@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Search bar">
-      <change afterPath="$PROJECT_DIR$/components/search/LocalSearch.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/url.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/components/filters/HomeFilter.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +101,7 @@
       <workItem from="1740047838817" duration="9027000" />
       <workItem from="1740072072706" duration="5542000" />
       <workItem from="1740158865240" duration="2143000" />
-      <workItem from="1740171607307" duration="9699000" />
+      <workItem from="1740171607307" duration="10802000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -162,7 +159,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740176677532</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implement Search bar">
+      <option name="closed" value="true" />
+      <created>1740184225487</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1740184225487</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
