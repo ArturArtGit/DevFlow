@@ -4,10 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Setup MongoDB &amp; Mongoose">
-      <change afterPath="$PROJECT_DIR$/database/account.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/user.model.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement User and Account DB models">
+      <change afterPath="$PROJECT_DIR$/database/answer.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/collection.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/interaction.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/question.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/tag-question.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/tag.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/template.model.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/vote.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/user.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +59,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;A:/WebStormApps/Learning different technoligies/NextJS/JavaScript Mastery/the-ultimate-nextjs-15/components/editor&quot;,
+    &quot;last_opened_file_path&quot;: &quot;A:/WebStormApps/Learning different technoligies/NextJS/JavaScript Mastery/the-ultimate-nextjs-15/database&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -68,6 +75,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\database" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\components\editor" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\constants" />
       <recent name="A:\WebStormApps\Learning different technoligies\NextJS\JavaScript Mastery\the-ultimate-nextjs-15\app" />
@@ -105,7 +113,7 @@
       <workItem from="1740171607307" duration="11470000" />
       <workItem from="1740221987248" duration="10543000" />
       <workItem from="1740259409002" duration="3566000" />
-      <workItem from="1740391203741" duration="2223000" />
+      <workItem from="1740391203741" duration="8602000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -203,7 +211,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740262302375</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Implement User and Account DB models">
+      <option name="closed" value="true" />
+      <created>1740393794203</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1740393794203</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +237,7 @@
     <MESSAGE value="Implement Question Card" />
     <MESSAGE value="Implement the UI of the Question Form" />
     <MESSAGE value="Setup MongoDB &amp; Mongoose" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setup MongoDB &amp; Mongoose" />
+    <MESSAGE value="Implement User and Account DB models" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement User and Account DB models" />
   </component>
 </project>
