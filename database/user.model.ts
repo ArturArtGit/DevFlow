@@ -1,4 +1,4 @@
-import { model, models, Schema } from "mongoose"
+import { model, models, Schema, Document } from "mongoose"
 
 // Описываем интерфейс для типизации
 export interface IUser {
@@ -6,11 +6,15 @@ export interface IUser {
   username: string
   email: string
   bio?: string
-  image: string
+  image?: string
   location?: string
   portfolio?: string
   reputation?: number
 }
+
+// Экспортируем этот интерфейс, чтобы TS подхватывал такие поля как _id, id, createdAt и т.д., которые mongoose добавляет сам
+// Делать именно так это рекомендация от разработчиков mongoose.
+export interface IUserDoc extends IUser, Document {}
 
 // Опишем схему User-a. timestamps - указываем, чтобы в бд была запись даты создания пользователя, а также даты обновления модели
 // mongoose это делает для нас
@@ -21,7 +25,7 @@ const UserSchema = new Schema<IUser>(
     username: { type: String, required: true },
     email: { type: String, required: true },
     bio: { type: String },
-    image: { type: String, required: true },
+    image: { type: String },
     location: { type: String },
     portfolio: { type: String },
     reputation: { type: Number, default: 0 },

@@ -4,17 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement User and Account DB models">
-      <change afterPath="$PROJECT_DIR$/database/answer.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/collection.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/interaction.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/question.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/tag-question.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/tag.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/template.model.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/vote.model.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Error Handling">
+      <change afterPath="$PROJECT_DIR$/lib/handlers/error.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/http-errors.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/account.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/account.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/answer.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/answer.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/collection.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/collection.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/interaction.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/interaction.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/question.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/tag-question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/tag-question.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/tag.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/tag.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/user.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/vote.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/vote.model.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +116,7 @@
       <workItem from="1740171607307" duration="11470000" />
       <workItem from="1740221987248" duration="10543000" />
       <workItem from="1740259409002" duration="3566000" />
-      <workItem from="1740391203741" duration="8602000" />
+      <workItem from="1740391203741" duration="14573000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -219,7 +222,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740393794203</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Implement Answer, Collection, Interaction, Question, Tag, TagQuestion, Vote DB models">
+      <option name="closed" value="true" />
+      <created>1740407733150</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1740407733150</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -238,6 +249,8 @@
     <MESSAGE value="Implement the UI of the Question Form" />
     <MESSAGE value="Setup MongoDB &amp; Mongoose" />
     <MESSAGE value="Implement User and Account DB models" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement User and Account DB models" />
+    <MESSAGE value="Implement Answer, Collection, Interaction, Question, Tag, TagQuestion, Vote DB models" />
+    <MESSAGE value="Implement Error Handling" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Error Handling" />
   </component>
 </project>
