@@ -5,19 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Error Handling">
-      <change afterPath="$PROJECT_DIR$/lib/handlers/error.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/http-errors.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/logger.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/account.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/account.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/answer.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/answer.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/collection.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/collection.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/interaction.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/interaction.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/question.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/tag-question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/tag-question.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/tag.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/tag.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/user.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/user.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/vote.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/vote.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/handlers/error.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/handlers/error.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mongoose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mongoose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +111,8 @@
       <workItem from="1740171607307" duration="11470000" />
       <workItem from="1740221987248" duration="10543000" />
       <workItem from="1740259409002" duration="3566000" />
-      <workItem from="1740391203741" duration="14573000" />
+      <workItem from="1740391203741" duration="15007000" />
+      <workItem from="1740433507123" duration="1454000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -230,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740407733150</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Implement Error Handling">
+      <option name="closed" value="true" />
+      <created>1740424712161</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1740424712161</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
