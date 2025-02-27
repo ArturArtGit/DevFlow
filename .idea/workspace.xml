@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Account by provider route">
-      <change afterPath="$PROJECT_DIR$/lib/api.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/handlers/fetch.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement a fetch handler">
+      <change afterPath="$PROJECT_DIR$/app/api/auth/signin-with-oauth/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/types/action.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/account/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/accounts/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/account/provider/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/accounts/provider/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/account/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/accounts/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/users/email/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/users/email/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +115,9 @@
       <workItem from="1740391203741" duration="15007000" />
       <workItem from="1740433507123" duration="2803000" />
       <workItem from="1740490942311" duration="10696000" />
-      <workItem from="1740519412951" duration="703000" />
+      <workItem from="1740519412951" duration="8401000" />
+      <workItem from="1740591765702" duration="8000" />
+      <workItem from="1740661305358" duration="3088000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -283,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740505679997</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Implement a fetch handler">
+      <option name="closed" value="true" />
+      <created>1740520561376</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1740520561376</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -312,6 +324,7 @@
     <MESSAGE value="Implement Create and Read Account routes" />
     <MESSAGE value="Implement Dynamic Account routes" />
     <MESSAGE value="Implement Account by provider route" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Account by provider route" />
+    <MESSAGE value="Implement a fetch handler" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement a fetch handler" />
   </component>
 </project>
