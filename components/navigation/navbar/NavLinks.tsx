@@ -8,9 +8,15 @@ import Image from "next/image"
 import ROUTES from "@/constants/routes"
 import { SheetClose } from "@/components/ui/sheet"
 
-const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
+const NavLinks = ({
+  isMobileNav = false,
+  userId,
+}: {
+  isMobileNav?: boolean
+  userId?: string
+}) => {
   const pathname = usePathname()
-  const userId = 1
+  console.log(userId)
 
   return (
     <>
@@ -20,6 +26,7 @@ const NavLinks = ({ isMobileNav = false }: { isMobileNav?: boolean }) => {
           pathname === item.route
 
         if (item.route === "/profile") {
+          console.log("here")
           if (userId) item.route = ROUTES.PROFILE(userId)
           else return null
         }
