@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import ROUTES from "@/constants/routes"
 import QuestionCard from "@/components/cards/QuestionCard"
 import { auth } from "@/auth"
+import { RouteParams } from "@/types/global"
 
 const questions = [
   {
@@ -48,11 +49,7 @@ const questions = [
   },
 ]
 
-interface SearchParams {
-  searchParams: Promise<{ [key: string]: string }>
-}
-
-const Home = async ({ searchParams }: SearchParams) => {
+const Home = async ({ searchParams }: RouteParams) => {
   const { query = "", filter = "" } = await searchParams
 
   const filteredQuestions = questions.filter((question) => {
