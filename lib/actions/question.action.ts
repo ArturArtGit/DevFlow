@@ -18,7 +18,7 @@ import mongoose, { FilterQuery } from "mongoose"
 import Question, { IQuestionDoc } from "@/database/question.model"
 import Tag, { ITagDoc } from "@/database/tag.model"
 import TagQuestion from "@/database/tag-question.model"
-import { NotFoundError, UnauthorizedError } from "@/lib/http-errors"
+import { NotFoundError } from "@/lib/http-errors"
 
 export async function createQuestion(
   params: CreateQuestionParams,
@@ -60,7 +60,7 @@ export async function createQuestion(
         // new: true - По умолчанию findOneAndUpdate возвращает старый документ (до изменений).
         // new: true заставляет его вернуть уже обновлённый документ.
         { name: { $regex: new RegExp(`^${tag}$`, "i") } },
-        { $setOnInsert: { name: tag }, $inc: { question: 1 } },
+        { $setOnInsert: { name: tag }, $inc: { questions: 1 } },
         { upsert: true, new: true, session },
       )
 
