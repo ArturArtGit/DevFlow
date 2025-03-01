@@ -88,120 +88,6 @@ export async function createQuestion(
   }
 }
 
-/* export async function editQuestion(
-  params: EditQuestionParams,
-): Promise<ActionResponse<IQuestion>> {
-  const validationResult = await action({
-    params,
-    schema: EditQuestionSchema,
-    authorize: true,
-  })
-
-  if (validationResult instanceof Error) {
-    return handleError(validationResult) as ErrorResponse
-  }
-
-  const { title, content, tags, questionId } = validationResult.params!
-  const userId = validationResult.session?.user?.id
-
-  const session = await mongoose.startSession()
-  session.startTransaction()
-
-  try {
-    // Этот код выполняет поиск вопроса в базе данных по questionId и загружает данные о связанных тегах.
-    // Он находит тег по id и возвращает его name (у нас name - о структуре). И здесь массив тегов. В итоге возвращает
-    // сам объект вопроса, а в поле tags у него будут массив [Tag, Tag, Tag] где Tag это объект полный тега.
-    // Также здесь можем не передавать объект session для атомарной транзакции, так как этот метод не мутирует БД, всего лишь запрос
-    const question = await Question.findById(questionId).populate("tags")
-
-    if (!question) throw new NotFoundError("Question")
-    if (question.author.toString() !== userId) throw new UnauthorizedError()
-
-    if (question.title !== title || question.content !== content) {
-      question.title = title
-      question.content = content
-      // сохраняем новые данные
-      await question.save({ session })
-    }
-
-    const tagsToAdd = tags.filter(
-      (tag) =>
-        !question.tags.some((t: ITagDoc) =>
-          t.name.toLowerCase().includes(tag.toLowerCase()),
-        ),
-    )
-
-    const tagsToRemove = question.tags.filter(
-      (tag: ITagDoc) =>
-        !tags.some((t) => t.toLowerCase() === tag.name.toLowerCase()),
-    )
-
-    const newTagDocuments = []
-
-    if (tagsToAdd.length > 0) {
-      for (const tag of tags) {
-        const existingTag = await Tag.findOneAndUpdate(
-          // Ищем name = регулярке
-          // Опция $setOnInsert отработает если не нашли такой тег
-          // $inc - отработает в обоих случаях. Если тег есть увеличит значение question на 1. Если тега нет, то создаст question и установит ему 1
-          // upsert Если тег найдён → просто обновляет его. Если тег не найден → создаёт новый документ с указанными данными.
-          // new: true - По умолчанию findOneAndUpdate возвращает старый документ (до изменений).
-          // new: true заставляет его вернуть уже обновлённый документ.
-          { name: { $regex: `^${tag}$`, $options: "i" } },
-          { $setOnInsert: { name: tag }, $inc: { question: 1 } },
-          { upsert: true, new: true, session },
-        )
-
-        if (existingTag) {
-          newTagDocuments.push({
-            tag: existingTag._id,
-            question: questionId,
-          })
-
-          question.tags.push(existingTag._id)
-        }
-      }
-    }
-
-    if (tagsToRemove.length > 0) {
-      const tagIdsToRemove = tagsToRemove.map((tag: ITagDoc) => tag.id)
-      await Tag.updateMany(
-        { _id: { $in: tagIdsToRemove } },
-        { $inc: { question: -1 } },
-        { session },
-      )
-
-      // Найди TagQuestion по полям tag = tagIdsToRemove и question = questionId и удали их.
-      await TagQuestion.deleteMany(
-        { tag: { $in: tagIdsToRemove }, question: questionId },
-        { session },
-      )
-
-      question.tags = question.tags.filter(
-        (tag: mongoose.Types.ObjectId) =>
-          !tagIdsToRemove.some((id: mongoose.Types.ObjectId) => {
-            return new mongoose.Types.ObjectId(id).equals(tag._id)
-          }),
-      )
-    }
-
-    if (newTagDocuments.length > 0) {
-      await TagQuestion.insertMany(newTagDocuments, { session })
-    }
-
-    await question.save({ session })
-    await session.commitTransaction()
-
-    return { success: true, data: JSON.parse(JSON.stringify(question)) }
-  } catch (error) {
-    await session.abortTransaction()
-    return handleError(error) as ErrorResponse
-  } finally {
-    await session.endSession()
-  }
-}
-*/
-
 export async function editQuestion(
   params: EditQuestionParams,
 ): Promise<ActionResponse<IQuestionDoc>> {
@@ -346,7 +232,7 @@ export async function getQuestions(
     return handleError(validationResult) as ErrorResponse
   }
 
-  const { page = 1, pageSize = 10, query, filter, sort } = params
+  const { page = 1, pageSize = 10, query, filter } = params
   const skip = (Number(page) - 1) * Number(pageSize)
   const limit = Number(pageSize)
 

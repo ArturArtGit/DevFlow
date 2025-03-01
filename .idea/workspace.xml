@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Fetch and Display Questions">
-      <change afterPath="$PROJECT_DIR$/components/DataRenderer.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/constants/states.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Data Renderer">
+      <change afterPath="$PROJECT_DIR$/lib/actions/tag.actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/cards/TagCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/cards/TagCard.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation/UserAvatar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/UserAvatar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation/navbar/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/navbar/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/constants/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/constants/routes.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/tags/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/tags/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/actions/question.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/question.action.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +116,8 @@
       <workItem from="1740661305358" duration="7469000" />
       <workItem from="1740698871961" duration="94000" />
       <workItem from="1740735695172" duration="16042000" />
-      <workItem from="1740830902740" duration="14134000" />
+      <workItem from="1740830902740" duration="16306000" />
+      <workItem from="1740864968368" duration="1429000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -346,7 +343,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740843450019</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Implement Data Renderer">
+      <option name="closed" value="true" />
+      <created>1740851774670</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1740851774670</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,7 +360,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Setup theme provider" />
     <MESSAGE value="Set up Light &amp; Dark Theme, Shadcn, Navbar" />
     <MESSAGE value="Setup Auth Layouts, Social Auth Form, Next Auth, OAuth with Google and Github providers" />
     <MESSAGE value="Create MobileNav and Pages Links" />
@@ -380,6 +384,7 @@
     <MESSAGE value="Implement LogOut and Show User Info on Home" />
     <MESSAGE value="Implement Question creation" />
     <MESSAGE value="Implement Fetch and Display Questions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Fetch and Display Questions" />
+    <MESSAGE value="Implement Data Renderer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Data Renderer" />
   </component>
 </project>
