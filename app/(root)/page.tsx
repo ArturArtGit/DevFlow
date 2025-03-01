@@ -7,6 +7,8 @@ import ROUTES from "@/constants/routes"
 import QuestionCard from "@/components/cards/QuestionCard"
 import { PaginatedSearchParams, RouteParams } from "@/types/global"
 import { getQuestions } from "@/lib/actions/question.action"
+import DataRenderer from "@/components/DataRenderer"
+import { EMPTY_QUESTION } from "@/constants/states"
 
 const Home = async ({
   searchParams,
@@ -43,28 +45,19 @@ const Home = async ({
         />
       </section>
       <HomeFilter />
-      {success ? (
-        <div className="mt-10 flex w-full flex-col gap-6">
-          {questions && questions.length > 0 ? (
-            questions.map((question) => (
-              <QuestionCard
-                key={question._id}
-                question={question}
-              ></QuestionCard>
-            ))
-          ) : (
-            <div className="mt-10 flex w-full items-center justify-center">
-              <p className="text-dark400_light700">No questions found</p>
-            </div>
-          )}
-        </div>
-      ) : (
-        <div className="mt-10 flex w-full items-center justify-center">
-          <p className="text-dark400_light700">
-            {error?.message || "Failed to fetch questions"}
-          </p>
-        </div>
-      )}
+      <DataRenderer
+        success={success}
+        data={questions}
+        error={error}
+        empty={EMPTY_QUESTION}
+        render={(questions) => (
+          <div className="mt-10 flex w-full flex-col gap-6">
+            {questions.map((question) => (
+              <QuestionCard key={question._id} question={question} />
+            ))}
+          </div>
+        )}
+      />
     </>
   )
 }

@@ -3,7 +3,7 @@ import Image from "next/image"
 import Theme from "@/components/navigation/navbar/Theme"
 import MobileNavigation from "@/components/navigation/navbar/MobileNavigation"
 import { auth } from "@/auth"
-import UserAvatar from "@/components/navigation/UserAvatar"
+import UserAvatar from "@/components/UserAvatar"
 
 const Navbar = async () => {
   const session = await auth()
