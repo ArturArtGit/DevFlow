@@ -4,14 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement LogOut and Show User Info on Home">
-      <change afterPath="$PROJECT_DIR$/app/(root)/questions/[id]/page.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/actions/question.action.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Question creation">
+      <change afterPath="$PROJECT_DIR$/app/(root)/questions/[id]/edit/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/ask-question/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/ask-question/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/forms/QuestionForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/QuestionForm.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/database/question.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/SocialAuthForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/SocialAuthForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation/navbar/NavLinks.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation/navbar/NavLinks.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/actions/question.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/question.action.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/mongoose.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/mongoose.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/action.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/action.d.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
     </list>
@@ -119,7 +123,8 @@
       <workItem from="1740591765702" duration="8000" />
       <workItem from="1740661305358" duration="7469000" />
       <workItem from="1740698871961" duration="94000" />
-      <workItem from="1740735695172" duration="15983000" />
+      <workItem from="1740735695172" duration="16042000" />
+      <workItem from="1740830902740" duration="10338000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -329,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740751974656</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Implement Question creation">
+      <option name="closed" value="true" />
+      <created>1740760902426</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1740760902426</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -362,6 +375,7 @@
     <MESSAGE value="Implement OAuth" />
     <MESSAGE value="Implement Auth via Credentials via Server Actions" />
     <MESSAGE value="Implement LogOut and Show User Info on Home" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement LogOut and Show User Info on Home" />
+    <MESSAGE value="Implement Question creation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Question creation" />
   </component>
 </project>

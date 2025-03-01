@@ -3,7 +3,7 @@ import { auth } from "@/auth"
 import { redirect } from "next/navigation"
 import ROUTES from "@/constants/routes"
 
-const AskQuestionPage = async () => {
+const AskQuestion = async () => {
   const session = await auth()
   if (!session) redirect(ROUTES.SIGN_IN)
 
@@ -18,4 +18,4 @@ const AskQuestionPage = async () => {
   )
 }
 
-export default AskQuestionPage
+export default AskQuestion

@@ -1,5 +1,7 @@
 import mongoose, { Mongoose } from "mongoose"
 import logger from "@/lib/logger"
+// Сделали импорт так, чтобы все правильно работало.
+import "@/database"
 
 const MONGODB_URI = process.env.MONGODB_URI
 

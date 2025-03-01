@@ -16,7 +16,6 @@ const NavLinks = ({
   userId?: string
 }) => {
   const pathname = usePathname()
-  console.log(userId)
 
   return (
     <>
@@ -26,7 +25,6 @@ const NavLinks = ({
           pathname === item.route
 
         if (item.route === "/profile") {
-          console.log("here")
           if (userId) item.route = ROUTES.PROFILE(userId)
           else return null
         }

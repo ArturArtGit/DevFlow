@@ -22,25 +22,22 @@ import dynamic from "next/dynamic"
 import { z } from "zod"
 import TagCard from "@/components/cards/TagCard"
 import { useRouter } from "next/navigation"
-import { createQuestion } from "@/lib/actions/question.action"
+import { createQuestion, editQuestion } from "@/lib/actions/question.action"
 import { toast } from "@/hooks/use-toast"
 import ROUTES from "@/constants/routes"
 import { ReloadIcon } from "@radix-ui/react-icons"
+import { Question } from "@/types/global"
 
 const Editor = dynamic(() => import("@/components/editor"), {
   ssr: false,
 })
 
-/* Todo
- 1. Валидация формы
- 2. Сохранение вопроса:
- 3. Создание вопроса в БД
- 4. Связать запрос с пользователем создавшим его - БД
- 5. Делать проверку Тегов. Если тег уже существует в БД, делать +1 к числу.
- 6. Если нету тега создаем новый тег в БД
- 7. Связать тег с созданным запросом
-*/
-const QuestionForm = () => {
+interface Props {
+  question?: Question
+  isEdit?: boolean
+}
+
+const QuestionForm = ({ question, isEdit = false }: Props) => {
   const router = useRouter()
   const editorRef = useRef<MDXEditorMethods>(null)
   const [isPending, startTransition] = useTransition()
@@ -48,9 +45,9 @@ const QuestionForm = () => {
   const form = useForm({
     resolver: zodResolver(AskQuestionSchema),
     defaultValues: {
-      title: "",
-      content: "",
-      tags: [],
+      title: question?.title || "",
+      content: question?.content || "",
+      tags: question?.tags.map((tag) => tag.name) || [],
     },
   })
 
@@ -91,10 +88,34 @@ const QuestionForm = () => {
       })
     }
   }
+
   const handleCreateQuestion = async (
     data: z.infer<typeof AskQuestionSchema>,
   ) => {
     startTransition(async () => {
+      if (isEdit && question) {
+        const result = await editQuestion({
+          questionId: question?._id,
+          ...data,
+        })
+
+        if (result.success) {
+          toast({
+            title: "Success",
+            description: "Question updated successfully",
+          })
+
+          if (result.data) router.push(ROUTES.QUESTION(result.data._id))
+        } else {
+          toast({
+            title: `Error ${result.status}`,
+            description: result.error?.message || "Something went wrong",
+            variant: "destructive",
+          })
+        }
+        // Если isEdit, то завершаем выполнение функции, чтобы не писать else.
+        return
+      }
       const result = await createQuestion(data)
 
       if (result.success) {
@@ -219,7 +240,7 @@ const QuestionForm = () => {
                 <span>Submitting</span>
               </>
             ) : (
-              <>Ask A Question</>
+              <>{isEdit ? "Edit" : "Ask A Question"}</>
             )}
           </Button>
         </div>
