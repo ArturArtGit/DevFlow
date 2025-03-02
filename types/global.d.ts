@@ -39,9 +39,9 @@ type ErrorResponse = ActionResponse<undefined> & { success: false }
 type APIErrorResponse = NextResponse<ErrorResponse>
 type APIResponse<T = null> = NextResponse<SuccessResponse<T>> | ErrorResponse
 
-interface RouteParams<T = Promise<Record<string, string>>> {
+interface RouteParams<T> {
   params: Promise<Record<string, string>>
-  searchParams: T
+  searchParams: Promise<T> | Promise<Record<string, string>>
 }
 
 interface PaginatedSearchParams {

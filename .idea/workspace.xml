@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Display Tags">
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Tags Question Action">
+      <change afterPath="$PROJECT_DIR$/app/(root)/tags/[id]/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(root)/tags/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/tags/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/auth.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/auth.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/question.action.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/question.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/actions/tag.actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/actions/tag.action.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/action.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/action.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +119,7 @@
       <workItem from="1740735695172" duration="16042000" />
       <workItem from="1740830902740" duration="16306000" />
       <workItem from="1740864968368" duration="3700000" />
-      <workItem from="1740924900774" duration="822000" />
+      <workItem from="1740924900774" duration="1189000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -372,7 +369,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740870002147</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Implement Tags Question Action">
+      <option name="closed" value="true" />
+      <created>1740925802914</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1740925802914</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -381,7 +386,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Create MobileNav and Pages Links" />
     <MESSAGE value="Implement RightSidebar" />
     <MESSAGE value="Implement Search bar" />
     <MESSAGE value="Implement Home Filters" />
@@ -406,6 +410,7 @@
     <MESSAGE value="Implement Data Renderer" />
     <MESSAGE value="Implement getTags Server action" />
     <MESSAGE value="Implement Display Tags" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Display Tags" />
+    <MESSAGE value="Implement Tags Question Action" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Tags Question Action" />
   </component>
 </project>

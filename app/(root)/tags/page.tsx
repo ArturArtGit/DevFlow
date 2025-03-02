@@ -8,7 +8,7 @@ import TagCard from "@/components/cards/TagCard"
 
 const TagsPage = async ({
   searchParams,
-}: RouteParams<Promise<PaginatedSearchParams>>) => {
+}: RouteParams<PaginatedSearchParams>) => {
   const { page, pageSize, query, filter } = await searchParams
   const { success, data, error } = await getTags({
     page: Number(page) || 1,
