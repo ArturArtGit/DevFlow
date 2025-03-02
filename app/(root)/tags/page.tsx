@@ -1,4 +1,4 @@
-import { getTags } from "@/lib/actions/tag.actions"
+import { getTags } from "@/lib/actions/tag.action"
 import { PaginatedSearchParams, RouteParams } from "@/types/global"
 import ROUTES from "@/constants/routes"
 import LocalSearch from "@/components/search/LocalSearch"

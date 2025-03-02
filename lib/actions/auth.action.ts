@@ -12,6 +12,7 @@ import handleError from "../handlers/error"
 import { NotFoundError } from "../http-errors"
 import { SignInSchema, SignUpSchema } from "../validations"
 import { ActionResponse, ErrorResponse } from "@/types/global"
+import { AuthCredentials } from "@/types/action"
 
 export async function signUpWithCredentials(
   params: AuthCredentials,

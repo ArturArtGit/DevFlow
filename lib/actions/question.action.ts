@@ -19,6 +19,11 @@ import Question, { IQuestionDoc } from "@/database/question.model"
 import Tag, { ITagDoc } from "@/database/tag.model"
 import TagQuestion from "@/database/tag-question.model"
 import { NotFoundError } from "@/lib/http-errors"
+import {
+  CreateQuestionParams,
+  EditQuestionParams,
+  GetQuestionParams,
+} from "@/types/action"
 
 export async function createQuestion(
   params: CreateQuestionParams,
