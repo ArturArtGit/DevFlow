@@ -41,7 +41,7 @@ type APIResponse<T = null> = NextResponse<SuccessResponse<T>> | ErrorResponse
 
 interface RouteParams<T> {
   params: Promise<Record<string, string>>
-  searchParams: Promise<T> | Promise<Record<string, string>>
+  searchParams?: Promise<T> | Promise<Record<string, string>>
 }
 
 interface PaginatedSearchParams {
