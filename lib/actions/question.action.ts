@@ -11,6 +11,7 @@ import {
   AskQuestionSchema,
   EditQuestionSchema,
   GetQuestionSchema,
+  IncrementViewsSchema,
   PaginatedSearchParamsSchema,
 } from "@/lib/validations"
 import handleError from "@/lib/handlers/error"
@@ -18,12 +19,15 @@ import mongoose, { FilterQuery } from "mongoose"
 import Question, { IQuestionDoc } from "@/database/question.model"
 import Tag, { ITagDoc } from "@/database/tag.model"
 import TagQuestion from "@/database/tag-question.model"
-import { NotFoundError } from "@/lib/http-errors"
+import { NotFoundError, ValidationError } from "@/lib/http-errors"
 import {
   CreateQuestionParams,
   EditQuestionParams,
   GetQuestionParams,
+  IncrementViewsParams,
 } from "@/types/action"
+import { revalidatePath } from "next/cache"
+import ROUTES from "@/constants/routes"
 
 export async function createQuestion(
   params: CreateQuestionParams,
@@ -299,6 +303,33 @@ export async function getQuestions(
     return {
       success: true,
       data: { questions: JSON.parse(JSON.stringify(questions)), isNext },
+    }
+  } catch (error) {
+    return handleError(error) as ErrorResponse
+  }
+}
+
+export async function incrementViews(
+  params: IncrementViewsParams,
+): Promise<ActionResponse<{ views: number }>> {
+  const validatedResult = await action({ params, schema: IncrementViewsSchema })
+
+  if (validatedResult instanceof Error) {
+    return handleError(validatedResult) as ErrorResponse
+  }
+
+  const { questionId } = validatedResult.params!
+
+  try {
+    const question = await Question.findById(questionId)
+    if (!question) throw new NotFoundError("question")
+
+    question.views += 1
+    await question.save()
+
+    return {
+      success: true,
+      data: { views: question.views },
     }
   } catch (error) {
     return handleError(error) as ErrorResponse

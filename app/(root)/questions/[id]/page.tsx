@@ -3,19 +3,37 @@ import { Preview } from "@/components/editor/Preview"
 import Metric from "@/components/Metric"
 import UserAvatar from "@/components/UserAvatar"
 import ROUTES from "@/constants/routes"
+import { after } from "next/server"
 import { formatNumber, getTimeStamp } from "@/lib/utils"
 import Link from "next/link"
 import React from "react"
 import { RouteParams, Tag } from "@/types/global"
-import { getQuestion } from "@/lib/actions/question.action"
+import { getQuestion, incrementViews } from "@/lib/actions/question.action"
 import { notFound } from "next/navigation"
+import AnswerForm from "@/components/forms/AnswerForm"
+import { getAnswers } from "@/lib/actions/answer.action"
 
 const QuestionDetails = async ({ params }: RouteParams<null>) => {
   const { id } = await params
 
   const { success, data: question } = await getQuestion({ questionId: id })
 
-  if (!question) return notFound()
+  after(async () => {
+    await incrementViews({ questionId: id })
+  })
+
+  if (!success || !question) return notFound()
+
+  const {
+    data: answersResult,
+    error: answersError,
+    success: areAnswersLoaded,
+  } = await getAnswers({
+    questionId: id,
+    page: 1,
+    pageSize: 10,
+    filter: "latest",
+  })
 
   const { author, createdAt, answers, views, tags, content, title } =
     question || {}
@@ -85,6 +103,10 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
           />
         ))}
       </div>
+
+      <section className="my-5">
+        <AnswerForm questionId={question._id} />
+      </section>
     </>
   )
 }
