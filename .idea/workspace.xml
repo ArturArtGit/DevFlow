@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Display Answers">
-      <change afterPath="$PROJECT_DIR$/app/api/ai/answers/route.ts" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Ai Answer API route">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/api.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(root)/questions/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/questions/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/ai/answers/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/ai/answers/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/forms/AnswerForm.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/forms/AnswerForm.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/handlers/fetch.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/handlers/fetch.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +121,7 @@
       <workItem from="1740864968368" duration="3700000" />
       <workItem from="1740924900774" duration="11041000" />
       <workItem from="1740951252658" duration="2794000" />
-      <workItem from="1741008548516" duration="4289000" />
+      <workItem from="1741008548516" duration="7033000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -412,7 +411,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741010171171</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Implement Ai Answer API route">
+      <option name="closed" value="true" />
+      <created>1741014530919</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1741014530919</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -421,7 +428,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implement the UI of the Question Form" />
     <MESSAGE value="Setup MongoDB &amp; Mongoose" />
     <MESSAGE value="Implement User and Account DB models" />
     <MESSAGE value="Implement Answer, Collection, Interaction, Question, Tag, TagQuestion, Vote DB models" />
@@ -446,6 +452,7 @@
     <MESSAGE value="Implement Fetch Question Details" />
     <MESSAGE value="Implement GetAllAnswers Action" />
     <MESSAGE value="Implement Display Answers" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Display Answers" />
+    <MESSAGE value="Implement Ai Answer API route" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Ai Answer API route" />
   </component>
 </project>

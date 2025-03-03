@@ -20,14 +20,24 @@ import {
 import { AnswerSchema } from "@/lib/validations"
 import { createAnswer } from "@/lib/actions/answer.action"
 import { toast } from "@/hooks/use-toast"
+import { useSession } from "next-auth/react"
+import { api } from "@/lib/api"
 
 const Editor = dynamic(() => import("@/components/editor"), {
   ssr: false,
 })
 
-const AnswerForm = ({ questionId }: { questionId: string }) => {
+interface Props {
+  questionId: string
+  questionTitle: string
+  questionContent: string
+}
+
+const AnswerForm = ({ questionId, questionContent, questionTitle }: Props) => {
   const [isAnswering, startAnsweringTransition] = useTransition()
   const [isAISubmitting, setIsAISubmitting] = useState(false)
+
+  const session = useSession()
 
   const editorRef = useRef<MDXEditorMethods>(null)
 
@@ -48,6 +58,10 @@ const AnswerForm = ({ questionId }: { questionId: string }) => {
       if (result.success) {
         form.reset()
 
+        if (editorRef.current) {
+          editorRef.current.setMarkdown("")
+        }
+
         toast({
           title: "Success",
           description: "Your answer has been posted successfully",
@@ -62,6 +76,62 @@ const AnswerForm = ({ questionId }: { questionId: string }) => {
     })
   }
 
+  const generateAiAnswer = async () => {
+    if (session.status !== "authenticated") {
+      return toast({
+        title: "Please log in",
+        description: "You need to be logged in to use this feature",
+      })
+    }
+
+    setIsAISubmitting(true)
+
+    const userAnswer = editorRef.current?.getMarkdown()
+
+    try {
+      const { success, data, error } = await api.ai.getAnswer(
+        questionTitle,
+        questionContent,
+        userAnswer,
+      )
+
+      if (!success) {
+        toast({
+          title: "Error",
+          description: error?.message,
+          variant: "destructive",
+        })
+        return
+      }
+
+      const formattedAnswer = (data as unknown as string)
+        .replace(/<br>/g, " ")
+        .toString()
+        .trim()
+
+      if (editorRef.current) {
+        editorRef.current.setMarkdown(formattedAnswer)
+        form.setValue("content", formattedAnswer)
+        form.trigger("content")
+      }
+
+      toast({
+        title: "Success",
+        description: "AI answer has been generated",
+      })
+    } catch (error) {
+      toast({
+        title: "Error",
+        description:
+          error instanceof Error
+            ? error.message
+            : "There was a problem with your request",
+        variant: "destructive",
+      })
+    } finally {
+      setIsAISubmitting(false)
+    }
+  }
   return (
     <div>
       <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center sm:gap-2">
@@ -71,6 +141,7 @@ const AnswerForm = ({ questionId }: { questionId: string }) => {
         <Button
           className="btn light-border-2 gap-1.5 rounded-md border px-4 py-2.5 text-primary-500 shadow-none dark:text-primary-500"
           disabled={isAISubmitting || isAnswering}
+          onClick={generateAiAnswer}
         >
           {isAISubmitting ? (
             <>
