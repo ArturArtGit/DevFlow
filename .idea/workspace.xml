@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Enhance Users Answers with AI Feature">
-      <change afterPath="$PROJECT_DIR$/components/votes/Votes.tsx" afterDir="false" />
+    <list default="true" id="a55a0f8b-84e4-49f7-b9cb-6c3a40f6b342" name="Changes" comment="Implement Votes UI">
+      <change afterPath="$PROJECT_DIR$/lib/actions/vote.action.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(root)/questions/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(root)/questions/[id]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/global.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/global.d.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/validations.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/validations.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/action.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/action.d.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -120,7 +120,7 @@
       <workItem from="1740864968368" duration="3700000" />
       <workItem from="1740924900774" duration="11041000" />
       <workItem from="1740951252658" duration="2794000" />
-      <workItem from="1741008548516" duration="7587000" />
+      <workItem from="1741008548516" duration="9809000" />
     </task>
     <task id="LOCAL-00001" summary="Set up Eslint, Prettier, fonts, assets.">
       <option name="closed" value="true" />
@@ -426,7 +426,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741018612640</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Implement Votes UI">
+      <option name="closed" value="true" />
+      <created>1741019408974</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1741019408974</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -435,7 +443,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Implement User and Account DB models" />
     <MESSAGE value="Implement Answer, Collection, Interaction, Question, Tag, TagQuestion, Vote DB models" />
     <MESSAGE value="Implement Error Handling" />
     <MESSAGE value="Implement Logging via pino" />
@@ -460,6 +467,7 @@
     <MESSAGE value="Implement Display Answers" />
     <MESSAGE value="Implement Ai Answer API route" />
     <MESSAGE value="Implement Enhance Users Answers with AI Feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Enhance Users Answers with AI Feature" />
+    <MESSAGE value="Implement Votes UI" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Votes UI" />
   </component>
 </project>
