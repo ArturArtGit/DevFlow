@@ -2,6 +2,7 @@ import { fetchHandler } from "@/lib/handlers/fetch"
 import { IUser } from "@/database/user.model"
 import { IAccount, IAccountDoc } from "@/database/account.model"
 import { SignInWithOAuthParams } from "@/types/action"
+import { APIResponse } from "@/types/global"
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000/api"
@@ -65,6 +66,13 @@ export const api = {
     delete: (id: string) =>
       fetchHandler(`${API_ACCOUNTS_BASE_URL}/${id}`, {
         method: "DELETE",
+      }),
+  },
+  ai: {
+    getAnswer: (question: string, content: string) =>
+      fetchHandler(`${API_BASE_URL}/ai/answers`, {
+        method: "POST",
+        body: JSON.stringify({ question, content }),
       }),
   },
 }
