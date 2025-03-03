@@ -11,7 +11,8 @@ import DataRenderer from "@/components/DataRenderer"
 import { EMPTY_QUESTION } from "@/constants/states"
 
 const Home = async ({ searchParams }: RouteParams<PaginatedSearchParams>) => {
-  const { query, filter, page, pageSize } = await searchParams
+  const { query, filter, page, pageSize } =
+    (await searchParams) as PaginatedSearchParams
 
   const { success, data, error } = await getQuestions({
     page: Number(page) || 1,
