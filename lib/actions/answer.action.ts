@@ -5,17 +5,21 @@ import { revalidatePath } from "next/cache"
 
 import ROUTES from "@/constants/routes"
 import { Question } from "@/database"
-import Answer, { IAnswerDoc } from "@/database/answer.model"
+import Answer from "@/database/answer.model"
 
 import action from "../handlers/action"
 import handleError from "../handlers/error"
 import { AnswerServerSchema, GetAnswersSchema } from "../validations"
 import { CreateAnswerParams, GetAnswersParams } from "@/types/action"
-import { ActionResponse, ErrorResponse } from "@/types/global"
+import {
+  ActionResponse,
+  ErrorResponse,
+  Answer as IAnswer,
+} from "@/types/global"
 
 export async function createAnswer(
   params: CreateAnswerParams,
-): Promise<ActionResponse<IAnswerDoc>> {
+): Promise<ActionResponse<IAnswer>> {
   const validationResult = await action({
     params,
     schema: AnswerServerSchema,
@@ -71,7 +75,7 @@ export async function createAnswer(
 
 export async function getAnswers(params: GetAnswersParams): Promise<
   ActionResponse<{
-    answers: IAnswerDoc[]
+    answers: IAnswer[]
     isNext: boolean
     totalAnswers: number
   }>

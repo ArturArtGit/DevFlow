@@ -7,11 +7,12 @@ import { after } from "next/server"
 import { formatNumber, getTimeStamp } from "@/lib/utils"
 import Link from "next/link"
 import React from "react"
-import { RouteParams, Tag } from "@/types/global"
+import { Answer, RouteParams, Tag } from "@/types/global"
 import { getQuestion, incrementViews } from "@/lib/actions/question.action"
 import { notFound } from "next/navigation"
 import AnswerForm from "@/components/forms/AnswerForm"
 import { getAnswers } from "@/lib/actions/answer.action"
+import AllAnswers from "@/components/answers/AllAnswers"
 
 const QuestionDetails = async ({ params }: RouteParams<null>) => {
   const { id } = await params
@@ -103,6 +104,15 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
           />
         ))}
       </div>
+
+      <section className="my-5">
+        <AllAnswers
+          data={answersResult?.answers}
+          success={areAnswersLoaded}
+          error={answersError}
+          totalAnswers={answersResult?.totalAnswers || 0}
+        />
+      </section>
 
       <section className="my-5">
         <AnswerForm questionId={question._id} />
