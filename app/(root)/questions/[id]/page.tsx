@@ -6,7 +6,7 @@ import ROUTES from "@/constants/routes"
 import { after } from "next/server"
 import { formatNumber, getTimeStamp } from "@/lib/utils"
 import Link from "next/link"
-import React from "react"
+import React, { Suspense } from "react"
 import { Answer, RouteParams, Tag } from "@/types/global"
 import { getQuestion, incrementViews } from "@/lib/actions/question.action"
 import { notFound } from "next/navigation"
@@ -14,6 +14,7 @@ import AnswerForm from "@/components/forms/AnswerForm"
 import { getAnswers } from "@/lib/actions/answer.action"
 import AllAnswers from "@/components/answers/AllAnswers"
 import Votes from "@/components/votes/Votes"
+import { hasVoted } from "@/lib/actions/vote.action"
 
 const QuestionDetails = async ({ params }: RouteParams<null>) => {
   const { id } = await params
@@ -35,6 +36,11 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
     page: 1,
     pageSize: 10,
     filter: "latest",
+  })
+
+  const hasVotedPromise = hasVoted({
+    targetId: question._id,
+    targetType: "question",
   })
 
   const { author, createdAt, answers, views, tags, content, title } =
@@ -60,12 +66,15 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
           </div>
 
           <div className="flex justify-end">
-            <Votes
-              upvotes={question.upvotes}
-              hasupVoted={true}
-              downvotes={question.downvotes}
-              hasdownVoted={false}
-            />
+            <Suspense fallback={<div>Loading...</div>}>
+              <Votes
+                targetType="question"
+                targetId={question._id}
+                upvotes={question.upvotes}
+                downvotes={question.downvotes}
+                hasVotedPromise={hasVotedPromise}
+              />
+            </Suspense>
           </div>
         </div>
 
