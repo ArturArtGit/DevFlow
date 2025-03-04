@@ -7,7 +7,7 @@ import { after } from "next/server"
 import { formatNumber, getTimeStamp } from "@/lib/utils"
 import Link from "next/link"
 import React, { Suspense } from "react"
-import { Answer, RouteParams, Tag } from "@/types/global"
+import { RouteParams, Tag } from "@/types/global"
 import { getQuestion, incrementViews } from "@/lib/actions/question.action"
 import { notFound } from "next/navigation"
 import AnswerForm from "@/components/forms/AnswerForm"
@@ -15,6 +15,8 @@ import { getAnswers } from "@/lib/actions/answer.action"
 import AllAnswers from "@/components/answers/AllAnswers"
 import Votes from "@/components/votes/Votes"
 import { hasVoted } from "@/lib/actions/vote.action"
+import SaveQuestion from "@/components/questions/SaveQuestion"
+import { hasSavedQuestion } from "@/lib/actions/collection.action"
 
 const QuestionDetails = async ({ params }: RouteParams<null>) => {
   const { id } = await params
@@ -43,6 +45,10 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
     targetType: "question",
   })
 
+  const hasSavedQuestionPromise = hasSavedQuestion({
+    questionId: question._id,
+  })
+
   const { author, createdAt, answers, views, tags, content, title } =
     question || {}
 
@@ -65,7 +71,7 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
             </Link>
           </div>
 
-          <div className="flex justify-end">
+          <div className="flex items-center justify-end gap-4">
             <Suspense fallback={<div>Loading...</div>}>
               <Votes
                 targetType="question"
@@ -73,6 +79,13 @@ const QuestionDetails = async ({ params }: RouteParams<null>) => {
                 upvotes={question.upvotes}
                 downvotes={question.downvotes}
                 hasVotedPromise={hasVotedPromise}
+              />
+            </Suspense>
+
+            <Suspense fallback={<div>Loading...</div>}>
+              <SaveQuestion
+                questionId={question._id}
+                hasSavedQuestionPromise={hasSavedQuestionPromise}
               />
             </Suspense>
           </div>
