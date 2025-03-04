@@ -1,4 +1,6 @@
 import { PaginatedSearchParams } from "@/types/global"
+import { z } from "zod"
+import { CollectionBasedSchema } from "@/lib/validations"
 
 interface SignInWithOAuthParams {
   provider: "github" | "google"
@@ -65,3 +67,5 @@ interface HasVotedResponse {
   hasUpvoted: boolean
   hasDownvoted: boolean
 }
+
+type CollectionBaseParams = z.infer<CollectionBaseSchema>
