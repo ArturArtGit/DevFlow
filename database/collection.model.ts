@@ -5,7 +5,7 @@ export interface ICollection {
   question: Types.ObjectId
 }
 
-export interface ICollectionDoc extends ICollection, Document {}
+export interface ICollectionDoc extends ICollection, Document<string> {}
 
 const CollectionSchema = new Schema<ICollection>(
   {
